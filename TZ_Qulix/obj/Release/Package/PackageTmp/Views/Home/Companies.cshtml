@@ -1,0 +1,47 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Index
+    </title>
+</head>
+<body>
+    <h3>Компании</h3>
+    <table>
+        <tr>
+            <td><a href="/Company/AddCompany/"><input type="button" value="Добавить"></a></td>
+        </tr>
+    </table>
+    <br />
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Номер</td>
+                <td>Название</td>
+                <td>Размер</td>
+                <td>Форма</td>
+                <td colspan="2" align="center">Действие</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var company in ViewBag.Companies)
+                {
+                    <tr>
+                        <td align="center">@company.Id</td>
+                        <td>@company.Name</td>
+                        <td align="center">@company.Size</td>
+                        <td align="center">@company.Form</td>
+                        <td><a href="/Company/EditCompany/@company.Id"><input type="button" value="Редактировать"></a></td>
+                        <td><a href="/Company/DeletedCompany/@company.Id"><input type="button" value="Удалить"></a></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</body>
+</html>

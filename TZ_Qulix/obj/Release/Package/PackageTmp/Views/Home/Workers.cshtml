@@ -1,0 +1,53 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Index
+    </title>
+</head>
+<body>
+    <h3>Работники</h3>
+    <table>
+        <tr>
+            <td><a href="/Worker/AddWorker/"><input type="button" value="Добавить"></a></td>
+        </tr>
+    </table>
+    <br />
+    <table border="1" >
+        <thead>
+            <tr>
+                <td>Номер</td>
+                <td>Фамилия</td>
+                <td>Имя</td>
+                <td>Отчество</td>
+                <td>Дата</td>
+                <td>Должность</td>
+                <td>Компания</td>
+                <td colspan="2" align="center">Действие</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var worker in ViewBag.Workers)
+                {
+                    <tr>
+                        <td align="center">@worker.Id</td>
+                        <td>@worker.Surname</td>
+                        <td>@worker.Name</td>
+                        <td>@worker.Otchestvo</td>
+                        <td>@worker.Date</td>
+                        <td>@worker.Post</td>
+                        <td>@worker.Company</td>
+                        <td><a href="/Worker/EditWorker/@worker.Id"><input type="button" value="Редактировать"></a></td>
+                        <td><a href="/Worker/DeletedWorker/@worker.Id"><input type="button" value="Удалить"></a></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</body>
+</html>

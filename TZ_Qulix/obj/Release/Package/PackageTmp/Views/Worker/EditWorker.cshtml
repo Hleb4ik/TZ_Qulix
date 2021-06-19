@@ -1,0 +1,16 @@
+﻿@{
+    Layout = null;
+}
+
+<h2>Редактирование записи</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <input type="submit" value="Сохранить" />
+    <tr>
+        <td>
+            <a href="/Home/Workers/"><input type="button" value="Назад"></a>
+        </td>
+    </tr>
+}

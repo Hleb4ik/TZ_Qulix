@@ -1,0 +1,11 @@
+﻿@{
+    Layout = null;
+}
+
+<h2>Удаление записи</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <input type="submit" value="Ок" />
+}

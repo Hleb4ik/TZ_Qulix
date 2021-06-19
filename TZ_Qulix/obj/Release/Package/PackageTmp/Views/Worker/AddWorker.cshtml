@@ -1,0 +1,59 @@
+﻿
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add</title>
+</head>
+<body>
+   <div>
+       <h3>Добавление</h3>
+       <br />
+       <form method="post" action="">
+           <table>
+               <tbody>
+                   <tr>
+                       <td>Фамилия</td>
+                       <td><input type="text" name="Surname" /></td>
+                   </tr>
+                   <tr>
+                       <td>Имя</td>
+                       <td><input type="text" name="Name" /></td>
+                   </tr>
+                   <tr>
+                       <td>Отчество</td>
+                       <td><input type="text" name="Otchestvo" /></td>
+                   </tr>
+                   <tr>
+                       <td>Дата</td>
+                       <td><input type="text" name="Date" /></td>
+                   </tr>
+                   <tr>
+                       <td>Должность</td>
+                       <td>
+                           <select name="Post" id="dropdown">
+                               <option value="">Выберите должность</option>
+                               <option value="Разработчик">Разработчик</option>
+                               <option value="Тестировщик"> Тестировщик </option>
+                               <option value="Бизнес-аналитик">Бизнес-аналитик</option>
+                               <option value="Менеджер">Менеджер</option>
+                           </select>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>Компания</td>
+                       <td><input type="text" name="Company" /></td>
+                   </tr>
+                   <tr>
+                       <td><input type="submit" value="Добавить" /></td>
+                       <td><a href="/Home/Workers/"><input type="button" value="Отмена"></a></td>
+                   </tr>
+               </tbody>
+           </table>
+       </form>
+   </div>
+</body>
+</html>
